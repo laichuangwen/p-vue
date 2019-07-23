@@ -1,7 +1,11 @@
 #学习搭建vue项目
+
 ##lerna 管理多项目
+
 ###开始
+
 Lerna官网在这里https://lernajs.io/，仓库在这里https://github.com/lerna/lerna，可先查看官方详细的文档说明。
+
 #####常用指令
 - lerna init: 初始化项目
 - lerna bootstrap: 自动构建项目
