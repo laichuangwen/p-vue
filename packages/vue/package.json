@@ -4,5 +4,14 @@
   "description": "vue",
   "main": "index.js",
   "author": "xll",
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "ca450c116543432ef814662a05af8bb213d0274c",
+  "dependencies": {
+    "launch": "^0.0.5"
+  },
+  "scripts": {
+    "start": "yarn && node scripts/devServer",
+    "dev": "yarn start",
+    "build": "yarn && node scripts/build"
+  }
 }
