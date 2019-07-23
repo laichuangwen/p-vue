@@ -1,13 +1,13 @@
 {
   "name": "vue",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "vue",
   "main": "index.js",
   "author": "xll",
   "license": "MIT",
   "gitHead": "ca450c116543432ef814662a05af8bb213d0274c",
   "dependencies": {
-    "launch": "^0.0.5"
+    "launch": "^0.0.6"
   },
   "scripts": {
     "start": "yarn && node scripts/devServer",
