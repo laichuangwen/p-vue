@@ -1,6 +1,6 @@
 {
   "name": "launch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "启动器",
   "main": "index.js",
   "author": "xll",
