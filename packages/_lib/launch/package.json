@@ -1,0 +1,8 @@
+{
+  "name": "launch",
+  "version": "1.0.0",
+  "description": "启动器",
+  "main": "index.js",
+  "author": "xll",
+  "license": "MIT"
+}
