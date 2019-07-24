@@ -1,7 +1,7 @@
 {
   "port": 8080,
   "name": "vue",
-  "version": "0.0.6",
+  "version": "0.0.2",
   "description": "vue",
   "main": "index.js",
   "author": "xll",
@@ -13,6 +13,6 @@
     "build": "yarn && node scripts/build"
   },
   "dependencies": {
-    "vue-launch": "^0.0.6"
+    "vue-launch": "^0.0.2"
   }
 }
