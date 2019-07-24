@@ -1,6 +1,6 @@
 {
   "name": "vue-launch",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "启动器",
   "main": "src/index.js",
   "author": "xll",
