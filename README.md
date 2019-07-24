@@ -18,3 +18,29 @@ Lerna官网在这里 https://lernajs.io/，
 - lerna clean: 清理node_modules文件夹
 - lerna add: 添加依赖（类似npm install)
 - lerna publish: 发版git
+  
+## consola  控制器日志输出工具
+github  https://github.com/nuxt/consola
+
+#### types 
+
+| 类型    | 级别     |
+| ------- | -------- |
+| fatal   | 0        |
+| error   | 0        |
+| warn    | 1        |
+| log     | 2        |
+| info    | 3        |
+| success | 3        |
+| debug   | 4        |
+| trace   | 5        |
+| silent  | Infinity |
+| ready   | 3        |
+| start   | 3        |
+
+
+## ora 控制台加载
+github  https://github.com/sindresorhus/ora
+
+## Inquirer 命令行用户界面 
+github  https://github.com/SBoudrias/Inquirer.js

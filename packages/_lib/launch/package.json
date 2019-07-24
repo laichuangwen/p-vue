@@ -1,10 +1,10 @@
 {
-  "name": "launch",
+  "name": "vue-launch",
   "version": "0.0.6",
   "description": "启动器",
   "main": "src/index.js",
   "author": "xll",
-  "gitHead": "ca450c116543432ef814662a05af8bb213d0274c",
+  "gitHead": "6df0d7ad7c055725b643b22150af0021cd5edb2e",
   "dependencies": {
     "autoprefixer": "^9.6.1"
   }

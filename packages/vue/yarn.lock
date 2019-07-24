@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-launch@^0.0.5:
+launch@^0.0.6:
   version "0.0.1"
-  resolved "https://registry.yarnpkg.com/launch/-/launch-0.0.1.tgz#bed54644b55ca38f60dcd1faf1a7b868004c24ca"
+  resolved "https://registry.npm.taobao.org/launch/download/launch-0.0.1.tgz#bed54644b55ca38f60dcd1faf1a7b868004c24ca"
   integrity sha1-vtVGRLVco49g3NH68ae4aABMJMo=

@@ -1,7 +1,18 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "start": "yarn && node scripts/start",
+    "dev": "yarn start",
+    "build": "yarn && node scripts/build"
+  },
   "devDependencies": {
-    "lerna": "^3.15.0"
+    "lerna": "^3.16.4"
+  },
+  "dependencies": {
+    "consola": "^2.9.0",
+    "inquirer": "^6.5.0",
+    "ora": "^3.4.0"
   }
 }
