@@ -1,11 +1,8 @@
 {
-  "port": 8080,
-  "name": "vue",
+  "port": 8082,
+  "name": "vue2",
   "version": "1.0.0",
-  "description": "vue",
-  "main": "index.js",
-  "author": "xll",
-  "license": "MIT",
+  "description": "vue2",
   "gitHead": "0eb568e9a45ec7796cf77af2c84cc118aa6d6843",
   "dependencies": {
     "vue-launch": "^1.0.0"

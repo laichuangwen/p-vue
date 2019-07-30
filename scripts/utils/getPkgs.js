@@ -22,16 +22,15 @@ module.exports = (dir) => {
       description,
       author,
     } = pkgJson;
+    // 把参数附加在脚本上
+    const options = `--rootPath ${ path.resolve('packages', file)} --name ${name} --port ${port}`
     return {
       port,
       name,
       description,
       author,
-      rootPath: path.resolve('packages', file), // 项目的根目录全路径
-      scriptsPath: path.resolve('packages', file, 'scripts'), // 项目的脚本全路径
-      scriptsPath: path.resolve('packages', file, 'scripts'), // 项目的脚本全路径
-      devServer: path.resolve('packages', file, 'scripts', 'devServer'),
-      build: path.resolve('packages', file, 'scripts', 'build'),
+      devServer: `${path.resolve('packages', file, 'scripts', 'devServer')} ${options}`,
+      build: `${path.resolve('packages', file, 'scripts', 'build')} ${options}`,
       lint: path.resolve('packages', file, 'scripts', 'lint'),
     }
   });

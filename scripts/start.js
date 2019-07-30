@@ -1,4 +1,5 @@
 const consola = require('consola');
+const chalk = require('chalk');
 const ora = require('ora');
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
@@ -9,25 +10,18 @@ const {
 (async () => {
   const spinner = ora('下载依赖中...\n').start();
   const {
-    error,
     stdout,
-    stderr
-  } = await exec('yarn bootstrap');
-  if (error) {
-    spinner.fail(error);
-  }
-  if (stdout) {
-    consola.info(stdout);
-  }
-  if (stderr) {
-    consola.info(stderr);
-  }
+    stderr,
+  } = await exec('yarn bootstrap').catch((err) => {
+    spinner.fail('依赖下载失败！');
+  });
+  if (stdout) consola.info(stdout);
+  if (stderr) consola.warn(stderr);
   spinner.succeed('依赖下载完成');
   const pkgs = getPkgs();
   // 启动项目方法
   const pkgDevServer = (pkg) => {
     consola.start(`正在启动项目：${pkg.name}`);
-    process.env.ROOT_PATH = pkg.rootPath;
     execSync(`node ${pkg.devServer}`);
   }
   // yarn start 后附加了参数，快捷启动

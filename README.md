@@ -44,3 +44,7 @@ github  https://github.com/sindresorhus/ora
 
 ## Inquirer 命令行用户界面 
 github  https://github.com/SBoudrias/Inquirer.js
+
+## chalk  更改终端输出的字体颜色
+https://github.com/chalk/chalk
+
