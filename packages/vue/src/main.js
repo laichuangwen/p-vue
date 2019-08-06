@@ -1,5 +1,6 @@
-import './style/index.css';
-var img = require('./assets/empty.png');
-import './xll';
-console.log(img);
-console.log('main');
+import Vue from 'vue';
+import App from './App.vue';
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app');

@@ -1,11 +1,15 @@
+const merge = require('webpack-merge');
 const build = require('./build');
 const devServer = require('./devServer');
-const prodWebpackConfig = require('./webpack.prod');
-const devWebpackConfig = require('./webpack.dev');
+const prodWebpackConfig = require('./config/webpack.prod');
+const devWebpackConfig = require('./config/webpack.dev');
+const {
+  getVueConfig,
+} = require('./utils');
 module.exports = {
   // 启动本地服务开发
   devServer() {
-    return devServer(devWebpackConfig);
+    return devServer(merge(devWebpackConfig, getVueConfig()));
   },
   // 启动编译打包
   build() {

@@ -13,9 +13,8 @@ module.exports = (command, option) => {
       ...option,
     });
   } catch (e) {
-    console.error(e);
+    // console.error('ddd',e);
     process.exit(1);
   }
-
   return res;
 }

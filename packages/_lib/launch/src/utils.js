@@ -9,22 +9,23 @@ const {
 module.exports = {
   resolve(dir) {
     // 不传返回 rootPath
-    if(!dir) return rootPath;
+    if (!dir) return rootPath;
     // 传值 判断该文件是否存在，存在返回路径
     if (fs.existsSync(path.join(rootPath, dir))) return path.join(rootPath, dir);
     return '';
   },
+  modulePath: path.resolve(process.cwd(), 'packages/_lib/launch/node_modules'),
   pkgName() {
     // 读取包的项目名
-    if(name) return name;
+    if (name) return name;
     return '';
   },
   getPort() {
-    if(port) return port;
+    if (port) return port;
     return '';
   },
   // 读取ip
-  getIp () {
+  getIp() {
     const interfaces = require('os').networkInterfaces();
     for (let devName in interfaces) {
       for (let alias of interfaces[devName]) {
@@ -33,5 +34,13 @@ module.exports = {
         }
       }
     }
-  }
+  },
+  getVueConfig() {
+    // 读取项目下的vue.config.js 文件
+    if (fs.existsSync(path.join(rootPath, 'vue.config.js'))) {
+      const config = require(path.join(rootPath, 'vue.config.js'));
+      return config;
+    }
+    return {};
+  },
 }

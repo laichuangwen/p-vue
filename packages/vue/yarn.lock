@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-launch@^0.0.6:
-  version "0.0.1"
-  resolved "https://registry.npm.taobao.org/launch/download/launch-0.0.1.tgz#bed54644b55ca38f60dcd1faf1a7b868004c24ca"
-  integrity sha1-vtVGRLVco49g3NH68ae4aABMJMo=
+vue@^2.6.10:
+  version "2.6.10"
+  resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
+  integrity sha1-pysaQqTYKnIepDjRtr9V5mGVxjc=
