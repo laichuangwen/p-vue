@@ -1,7 +1,10 @@
-import getVueConfig from '../utils.js';
-module.exports = {
+const merge = require('babel-merge');
+const {
+  getVueConfig,
+} = require('../utils');
+const base = {
   presets: [
-    ['@babel/preset-env', {
+    [require.resolve('@babel/preset-env'), {
       targets: { // 目标环境
         browsers: [ // 浏览器
           "last 2 versions",
@@ -13,5 +16,6 @@ module.exports = {
       corejs: 3,
     }],
   ],
-  plugins: ['@babel/plugin-transform-runtime'],
+  plugins: [require.resolve('@babel/plugin-transform-runtime')],
 };
+module.exports = merge(base, getVueConfig('babel.config.js'));

@@ -1,13 +1,8 @@
 <template>
   <div :class="s.view">
-    vue2227
-    <div>
-      555555383877755555
+    <div :class="s.top">
+
     </div>
-    <div>
-      5555553838777
-    </div>
-    <img src="./assets/empty.png">
   </div>
 </template>
 
@@ -31,6 +26,11 @@ export default {
   width: 100px;
   height: 50px;
   background-color: #e344ef;
-  background-image: url('assets/empty.png')
+  background-image: url("assets/empty.png");
+}
+.top{
+  width: 300px;
+  height: 300px;
+  background-color: #ddd555;
 }
 </style>

@@ -17,12 +17,14 @@
     "not ie <= 8"
   ],
   "dependencies": {
-    "less-loader": "^5.0.0",
+    "element-ui": "^2.11.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
+    "babel-plugin-component": "^1.1.1",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
+    "postcss-px-to-viewport": "^1.1.1",
     "vue-launch": "^1.0.0"
   }
 }

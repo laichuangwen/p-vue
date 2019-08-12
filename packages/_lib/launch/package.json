@@ -59,6 +59,7 @@
     "yargs": "^13.3.0"
   },
   "dependencies": {
-    "core-js": "^3.1.4"
+    "core-js": "^3.1.4",
+    "deepmerge": "^4.0.0"
   }
 }

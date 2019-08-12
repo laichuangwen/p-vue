@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import App from './App.vue';
-// import './style/less.less';
 import './core';
 
 new Vue({

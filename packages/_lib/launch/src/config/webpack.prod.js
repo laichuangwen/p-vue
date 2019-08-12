@@ -12,13 +12,14 @@ const webpackConfig = {
         commons: { // 抽离公共的
           name: 'commons',
           chunks: "initial",
-          minChunks: 2
+          minSize: 0,
+          minChunks: 2,
         },
         vendor: { // 抽离第三方
+          priority: 1,
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          // chunks: 'all'
-          chunks: 'initial'
+          chunks: 'initial',
         }
       }
     },
