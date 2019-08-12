@@ -6,15 +6,23 @@
   "author": "xll",
   "license": "MIT",
   "gitHead": "0eb568e9a45ec7796cf77af2c84cc118aa6d6843",
+  "scripts": {
+    "start": "lerna bootstrap && node scripts/devServer",
+    "dev": "yarn start",
+    "build": "yarn && node scripts/build"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
   ],
   "dependencies": {
+    "less-loader": "^5.0.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
     "vue-launch": "^1.0.0"
   }
 }

@@ -7,6 +7,7 @@
     <div>
       5555553838777
     </div>
+    <img src="./assets/empty.png">
   </div>
 </template>
 
@@ -17,8 +18,10 @@ export default {
     };
   },
   mounted() {
-    const s = new Set();
-    [2, 3, 5, 4, 5, 2, 2].forEach(x => s.add(x));
+    const set = new Set([1, 2, 3, 4, 4]);
+    console.log(...set);
+  },
+  methods: {
   },
 };
 </script>
@@ -28,5 +31,6 @@ export default {
   width: 100px;
   height: 50px;
   background-color: #e344ef;
+  background-image: url('assets/empty.png')
 }
 </style>

@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'production';
 const chalk = require('chalk');
 const consola = require('consola');
 const ora = require('ora');

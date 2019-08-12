@@ -1,8 +1,4 @@
 const path = require('path');
-console.log(path.resolve(__dirname, './webpack.base.conf.js'));
-const {
-  modulePath,
-} = require('../utils');
 module.exports = {
   root: true,
   extends: ['plugin:vue/essential', 'airbnb-base'],
@@ -14,7 +10,7 @@ module.exports = {
     },
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'linebreak-style': 'off',
     'no-mixed-operators': 'off',

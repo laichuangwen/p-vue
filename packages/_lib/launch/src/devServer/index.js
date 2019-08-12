@@ -13,7 +13,6 @@ module.exports = (devWebpackConfig) => {
       messages: [`${pkgName()} 运行地址: http://${getIp()}:${devServerOptions.port}`],
     },
   }));
-  console.log(devWebpackConfig.module);
   const compiler = webpack(devWebpackConfig);
   const server = new WebpackDevServer(compiler, devServerOptions);
   server.listen(devServerOptions.port, devServerOptions.host, () => {});

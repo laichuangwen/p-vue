@@ -2,23 +2,18 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const {
   resolve,
   pkgName,
-  modulePath,
 } = require('../utils');
-console.log('modulePath:',modulePath);
-console.log(resolve('/'));
-console.log(resolve('/node_modules'));
-console.log(path.resolve(__dirname, '../../node_modules'));
+
 const webpackConfig = {
   context: resolve('/'),
   entry: {
     app: ["./src/main.js"],
   },
   output: {
-    filename: 'js/[name].js',
+    filename: 'js/[name].[hash:12].js',
     path: path.resolve(process.cwd(), `dist/${pkgName()}`),
     publicPath: '/',
   },
@@ -29,6 +24,13 @@ const webpackConfig = {
       'node_modules',
     ],
     extensions: [ '.js', '.json', '.vue', '.scss' ],
+    alias: {
+      vue$: 'vue/dist/vue.esm.js',
+      '~': resolve('src/'),
+      'assets': resolve('src/assets/'),
+      'components': resolve('src/components/'),
+      'core': resolve('src/core/'),
+    }
   },
   resolveLoader: {
     modules: [
@@ -81,20 +83,7 @@ const webpackConfig = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              [`${modulePath}/@babel/preset-env`, {
-                targets: { // 目标环境
-                  browsers: [ // 浏览器
-                    "last 2 versions",
-                    "ie >= 10"
-                  ],
-                  node: "current" // node
-                },
-                useBuiltIns: 'usage',
-                corejs: 3,
-              }],
-            ],
-            plugins: [`${modulePath}/@babel/plugin-transform-runtime`],
+            configFile: path.resolve(__dirname,'./babel.config.js'),
           }
         }
       },
@@ -152,6 +141,10 @@ const webpackConfig = {
             ]
           }
         ],
+      },
+      {
+        test: /\.(htm|html)$/i,
+        loader: 'html-withimg-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

@@ -13,6 +13,6 @@ module.exports = {
   },
   // 启动编译打包
   build() {
-    return build(prodWebpackConfig);
+    return build(merge(prodWebpackConfig, getVueConfig()));
   },
 }

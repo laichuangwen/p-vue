@@ -35,10 +35,10 @@ module.exports = {
       }
     }
   },
-  getVueConfig() {
-    // 读取项目下的vue.config.js 文件
-    if (fs.existsSync(path.join(rootPath, 'vue.config.js'))) {
-      const config = require(path.join(rootPath, 'vue.config.js'));
+  getVueConfig(fileName='vue.config.js') {
+    // 读取项目下的vue.config.js 等文件
+    if (fs.existsSync(path.join(rootPath, fileName))) {
+      const config = require(path.join(rootPath, fileName));
       return config;
     }
     return {};
