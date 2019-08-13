@@ -5,7 +5,8 @@
     "bootstrap": "lerna bootstrap",
     "start": "yarn && node scripts/start",
     "dev": "yarn start",
-    "build": "yarn && node scripts/build"
+    "build": "yarn && node scripts/build",
+    "lint": "yarn && node scripts/lint"
   },
   "devDependencies": {
     "lerna": "^3.16.4"

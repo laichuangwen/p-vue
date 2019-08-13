@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.age{
+.age {
   width: 500px;
   height: 500px;
   background-color: #663333;

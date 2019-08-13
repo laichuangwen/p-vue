@@ -31,7 +31,7 @@ module.exports = (dir) => {
       author,
       devServer: `${path.resolve('packages', file, 'scripts', 'devServer')} ${options}`,
       build: `${path.resolve('packages', file, 'scripts', 'build')} ${options}`,
-      lint: path.resolve('packages', file, 'scripts', 'lint'),
+      lint: `${path.resolve('packages', file, 'scripts', 'lint')} ${options}`,
     }
   });
   return pkgs;

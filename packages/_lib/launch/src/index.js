@@ -1,6 +1,7 @@
 const merge = require('webpack-merge');
 const build = require('./build');
 const devServer = require('./devServer');
+const lint = require('./lint');
 const prodWebpackConfig = require('./config/webpack.prod');
 const devWebpackConfig = require('./config/webpack.dev');
 const {
@@ -15,4 +16,5 @@ module.exports = {
   build() {
     return build(merge(prodWebpackConfig, getVueConfig()));
   },
+  lint,
 }

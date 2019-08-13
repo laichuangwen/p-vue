@@ -1,2 +1,2 @@
 console.log('ddddd');
-var img = require('./assets/empty.png');
+const img = require('./assets/empty.png');
